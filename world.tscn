@@ -5,7 +5,9 @@
 
 [node name="world" type="Node2D"]
 
-[node name="Enemy" parent="." instance=ExtResource("1_ikps5")]
-
 [node name="Player" parent="." instance=ExtResource("2_yxoxg")]
 position = Vector2(235, 249)
+
+[node name="Enemy" parent="." instance=ExtResource("1_ikps5")]
+
+[connection signal="body_entered" from="Player" to="Player" method="_on_body_entered"]
